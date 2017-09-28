@@ -66,7 +66,7 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.1)
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
-  - GTMSessionFetcher/Core (1.1.11)
+  - GTMSessionFetcher/Core (1.1.12)
   - leveldb-library (1.18.3)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -83,7 +83,15 @@ PODS:
     - Yoga (= 0.48.4.React)
   - React/cxxreact_legacy (0.48.4):
     - React/jschelpers_legacy
+  - React/DevSupport (0.48.4):
+    - React/Core
+    - React/RCTWebSocket
   - React/jschelpers_legacy (0.48.4)
+  - React/RCTBlob (0.48.4):
+    - React/Core
+  - React/RCTWebSocket (0.48.4):
+    - React/Core
+    - React/RCTBlob
   - RNFirebase (2.2.2):
     - React
   - Yoga (0.48.4.React)
@@ -98,6 +106,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - React/BatchedBridge (from `../node_modules/react-native`)
   - React/Core (from `../node_modules/react-native`)
+  - React/DevSupport (from `../node_modules/react-native`)
   - RNFirebase (from `../node_modules/react-native-firebase`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -121,7 +130,7 @@ SPEC CHECKSUMS:
   FirebaseRemoteConfig: 1c982f73af48ec048c8fa8621d5178cfdffac9aa
   FirebaseStorage: 0cca42d9b889a0227c3a50121f45a4469fc9eb27
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
+  GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
@@ -129,6 +138,6 @@ SPEC CHECKSUMS:
   RNFirebase: 318ed9a0dc200803f8bbc8b19d2b28e8c518aac6
   Yoga: ccefa1454b2e9825dce3b2df98088b7f0e3c2675
 
-PODFILE CHECKSUM: 22ef2a2e9919de846e59b629254c1fa6012715cd
+PODFILE CHECKSUM: 84927064a70909cd0308226d7341100d5fdd739d
 
 COCOAPODS: 1.3.1
