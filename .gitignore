@@ -51,3 +51,13 @@ buck-out/
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
+
+.tmp
+
+# API Settings
+src/config.js
+__tests__/
+
+ios/*
+!ios/Podfile
+!ios/Podfile.lock
