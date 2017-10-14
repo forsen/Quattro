@@ -1,6 +1,8 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
 
-import user from './user';
-import posts from './posts';
+import api from './api'
+import motor from './motor'
+import people from './people'
+import trip from './trip'
 
-export default combineReducers({ user, posts });
+export default combineReducers({api, motor, people, trip})
