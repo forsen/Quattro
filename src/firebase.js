@@ -1,7 +1,7 @@
 import RNFirebase from 'react-native-firebase';
 
 const configuration = {
-  debug: false,
+  debug: false
 };
 
 const firebase = RNFirebase.initializeApp(configuration);

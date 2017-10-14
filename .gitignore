@@ -17,14 +17,11 @@ xcuserdata
 *.xccheckout
 *.moved-aside
 DerivedData
-*.hmap
 *.ipa
-*.xcuserstate
-project.xcworkspace
+
 
 # Android/IntelliJ
 #
-build/
 .idea
 .gradle
 local.properties
@@ -55,9 +52,7 @@ fastlane/screenshots
 .tmp
 
 # API Settings
-src/config.js
+config.js
 __tests__/
 
-ios/*
-!ios/Podfile
-!ios/Podfile.lock
+ios/Pods
