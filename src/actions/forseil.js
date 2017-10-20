@@ -8,9 +8,8 @@ export const upForseil = () => (dispatch, getState) => {
   dispatch({
     type: UP_FORSEIL,
     payload: {
-      startDate: new Date(),
       people,
-      startTrip: distance.value
+      startTrip: distance.value,
     }
   })
 }
@@ -18,8 +17,8 @@ export const upForseil = () => (dispatch, getState) => {
 export const downForseil = () => (dispatch, getState) => {
   const {distance, forseil} = getState()
   const {up: deleted, ...newState} = forseil
-  newState.endDate = new Date()
   newState.endTrip = distance.value
+
   dispatch(addToForseilHistory(newState))
   dispatch({
     type: DOWN_FORSEIL

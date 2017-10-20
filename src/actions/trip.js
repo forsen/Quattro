@@ -7,9 +7,7 @@ export const STORSEIL_HISTORY = 'STORSEIL_HISTORY'
 
 export const startTrip = () => ({
   type: TRIP_START,
-  payload: {
-    startDate: new Date()
-  }
+  payload: {}
 })
 
 export const endTrip = (trip) => (dispatch) => dispatch(saveTrip(trip))
@@ -18,7 +16,7 @@ export const addToMotorHistory = (motorData) => {
   return {
     type: MOTOR_HISTORY,
     payload: {
-      motorData
+      ...motorData
     }
   }
 }
@@ -27,7 +25,7 @@ export const addToForseilHistory = (forseilData) => {
   return {
     type: FORSEIL_HISTORY,
     payload: {
-      forseilData
+      ...forseilData
     }
   }
 }
@@ -36,7 +34,7 @@ export const addToStorseilHistory = (storseilData) => {
   return {
     type: STORSEIL_HISTORY,
     payload: {
-      storseilData
+      ...storseilData
     }
   }
 }

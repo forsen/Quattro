@@ -8,7 +8,6 @@ export const startMotor = () => (dispatch, getState) => {
   dispatch({
     type: MOTOR_START,
     payload: {
-      startDate: new Date(),
       startTrip: distance.value,
       people
     }
@@ -18,7 +17,6 @@ export const startMotor = () => (dispatch, getState) => {
 export const stopMotor = () => (dispatch, getState) => {
   const { distance, motor } = getState()
   const {on: deleted, ...newState} = motor
-  newState.endDate = new Date();
   newState.endTrip = distance.value
   dispatch(addToMotorHistory(newState));
   dispatch({

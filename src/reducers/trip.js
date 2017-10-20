@@ -9,16 +9,16 @@ const defaultState = {
 };
 
 export default (state = defaultState, action) => {
-  debugger;
   switch (action.type) {
     case TRIP_START:
       return { ...state, ...action.payload, active: true };
     case MOTOR_HISTORY:
-      return { ...state, motorHistory: [...state.motorHistory, action.payload.motorData]}
+      return { ...state, motorHistory: [...state.motorHistory, action.payload]}
     case STORSEIL_HISTORY:
-      return { ...state, storseilHistory: [...state.storseilHistory, action.payload.storseilData]}
+      return { ...state, storseilHistory: [...state.storseilHistory, action.payload]}
     case FORSEIL_HISTORY:
-      return { ...state, forseilHistory: [...state.forseilHistory, action.payload.forseilData]}
+      debugger;
+      return { ...state, forseilHistory: [...state.forseilHistory, action.payload]}
     case SAVE_TRIP_SUCCESS:
       return defaultState;
     default:
