@@ -1,4 +1,4 @@
-import firebase from '../firebase';
+import firebase from 'react-native-firebase';
 import { username, password } from '../../config';
 
 export const SAVE_TRIP_SUCCESS = 'SAVE_TRIP_SUCCESS';
@@ -8,7 +8,7 @@ export const SIGN_IN_ERROR = 'SIGN_IN_ERROR';
 export const saveTrip = (trip) => dispatch => {
     firebase
       .auth()
-      .signInWithEmailAndPassword(username, password)
+      .signInAndRetrieveDataWithEmailAndPassword(username, password)
       .then(() => {
         firebase
           .database()
@@ -22,6 +22,7 @@ export const saveTrip = (trip) => dispatch => {
           });
       })
       .catch(error => {
+        debugger;
         dispatch({ type: SIGN_IN_ERROR, payload: error });
       });
 };
